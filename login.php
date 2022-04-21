@@ -306,9 +306,10 @@ session_start();
               </div>
               
               <button type="submit" class="btn btn-primary">Login</button>
+              
               <br>
               <br>
-              Don't have account?
+              Don't have an account?
               <a href="signup.php" class="de text-white">Click to Signup</a>
             </form>
           </div>
