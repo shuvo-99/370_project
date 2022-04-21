@@ -1,3 +1,4 @@
+
 <?php
 
 session_start();
@@ -35,6 +36,9 @@ session_start();
 						}
 						if($user_data['utype']==='receiver'){
 							header("Location: receiver_index.php");
+						}
+						if($user_data['utype']==='admin'){
+							header("Location: admin_index.php");
 						}
 
 						die;
@@ -126,8 +130,14 @@ session_start();
     />
 
     <title>Hello, world!</title>
+    <style>
+      .de{
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
+    
     <header>
       <!-- Navbar -->
 
@@ -162,22 +172,22 @@ session_start();
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link active fw-bold text-secondary fs-4 me-3"
-                  href="#aboutme"
+                  class="nav-link active fw-bold text-black fs-4 me-3"
+                  href="#aboutus"
                   >About us</a
                 >
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link active fw-bold text-secondary fs-4 me-3"
-                  href="#ex"
+                  class="nav-link active fw-bold text-black fs-4 me-3"
+                  href="#services"
                   >Services</a
                 >
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link active fw-bold text-secondary fs-4 me-3"
-                  href="#project"
+                  class="nav-link active fw-bold text-black fs-4 me-3"
+                  href="#login"
                   >Login</a
                 >
               </li>
@@ -195,7 +205,7 @@ session_start();
       <br />
 
       <!-- background -->
-      <section class="container my-5">
+      <section class="container my-5" id="home">
         <div
           id="carouselExampleInterval"
           class="carousel slide"
@@ -233,28 +243,31 @@ session_start();
         </div>
       </section>
     </header>
-
+    
     <main>
-      <div class="container" id="aboutme">
-        <h1 class="text-center">About Us</h1>
-        <br />
-        <p>
-          Shakti Foundation is a non-government organization committed to the
-          economic and social empowerment of disadvantaged women across
-          Bangladesh. It believes in realizing the potential of women to become
-          strong, independent members of their communities. Shakti began its
-          mission with urban microfinance programs and strategically expanded
-          its service network to reach remote rural areas. Over the years, it
-          has widened its range of development services to include basic health
-          care and education, agro-business growth, solar power, skills training
-          and advocacy. Shakti was founded in April 1992 and now serves almost
-          500,000 households within 54 districts of Bangladesh.
-        </p>
+      <div id="aboutus">
+        <div class="container" >
+          <h1 class="text-center">About Us</h1>
+          <br />
+          <p>
+            
+            Shakti Foundation is a non-government organization committed to the
+            economic and social empowerment of disadvantaged women across
+            Bangladesh. It believes in realizing the potential of women to become
+            strong, independent members of their communities. Shakti began its
+            mission with urban microfinance programs and strategically expanded
+            its service network to reach remote rural areas. Over the years, it
+            has widened its range of development services to include basic health
+            care and education, agro-business growth, solar power, skills training
+            and advocacy. Shakti was founded in April 1992 and now serves almost
+            500,000 households within 54 districts of Bangladesh.
+          </p>
+        </div>
       </div>
 
       <br />
 
-      <div class="container">
+      <div class="container" id="services">
         <h1 class="text-center">Services</h1>
         <br />
         <div class="row gx-5">
@@ -274,14 +287,14 @@ session_start();
       <br>
 
       <!-- Login -->
-      <div class="container ">
+      <div class="container " id="login">
         <h1 class="text-center">Sign in!!</h1>
         <div class="row bg-info align-items-center rounded-3 py-5">
           <div class="col text-center ">
             Join us now to help to create a better platform <br> to help and get help from people.
           </div>
           <div class="col">
-            <form>
+            <form method='post'>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">User name</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="user_name">
@@ -295,11 +308,12 @@ session_start();
               <button type="submit" class="btn btn-primary">Login</button>
               <br>
               <br>
-              
-              <a href="signup.php">Click to Signup</a>
+              Don't have account?
+              <a href="signup.php" class="de text-white">Click to Signup</a>
             </form>
           </div>
       </div>
+      
     </main>
 
     <script
