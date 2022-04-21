@@ -1,4 +1,3 @@
-
 <?php
 
 session_start();
@@ -62,29 +61,22 @@ session_start();
 	<title>Login</title>
 </head>
 <body>
-
 	<style type="text/css">
-
 	#text{
-
 		height: 25px;
 		border-radius: 5px;
 		padding: 4px;
 		border: solid thin #aaa;
 		width: 100%;
 	}
-
 	#button{
-
 		padding: 10px;
 		width: 100px;
 		color: black;
 		background-color: lightblue;
 		border: none;
 	}
-
 	#box{
-
 		background-color: grey;
 		margin: auto;
 		width: 300px;
@@ -95,19 +87,13 @@ session_start();
 			background-size: cover;
 			background-color: #cccccc;
 	}
-
 	</style>
-
 	<div id="box">
-
 		<form method="post">
 			<div style="font-size: 20px;margin: 10px;color: white;">Login</div>
-
 			<input id="text" type="text" name="user_name"><br><br>
 			<input id="text" type="password" name="password"><br><br>
-
 			<input id="button" type="submit" value="Login"><br><br>
-
 			<a href="signup.php">Click to Signup</a><br><br>
 		</form>
 	</div>
@@ -310,7 +296,7 @@ session_start();
               <br>
               <br>
               Don't have an account?
-              <a href="signup.php" class="de text-white">Click to Signup</a>
+              <a href="signup.php" class="de text-white">Click to Sign Up</a>
             </form>
           </div>
       </div>
@@ -324,4 +310,3 @@ session_start();
     ></script>
   </body>
 </html>
-

@@ -44,31 +44,25 @@ session_start();
   			background-color: #cccccc;
   	}
    #text{
-
      height: 25px;
      border-radius: 5px;
      padding: 4px;
      border: solid thin #aaa;
      width: 100%;
    }
-
    #button{
-
      padding: 10px;
      width: 100px;
      color: white;
      background-color: lightblue;
      border: none;
    }
-
    #box{
-
      background-color: grey;
      margin: auto;
      width: 300px;
      padding: 20px;
    }
-
    </style>
    <div id="box">
       <form method="post">
@@ -83,15 +77,11 @@ session_start();
         <select name="utype" id="utype">
             <option value="donor">Donor</option>
           <option value="receiver">Receiver</option>
-
         </select>
         <br><br><br>
         <input  id="button" type="submit"  value="Signup"><br><br>
-
         <a href="login.php">Click to login. </a><br><br>
-
       </form>
-
       </div>
       <button onclick="history.back()">Go Back</button> -->
   <!-- </body>

@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+	include("connection.php");
+	include("functions.php");
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,11 +42,17 @@
 </nav>
 
 
-<button type="button" class="btn btn-primary btn-lg btn-block mb-5">Request as an Individual</button>
+<p>
+
+  <button class="btn btn-primary btn-lg btn-block mb-5" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  Request as an Individual
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
 
 
-
-<form class="p-3" action="receiver_request.php" method="post">
+  <form class="p-3" action="receiver_request.php" method="post">
   <div class="form-row">
    <div class="form-group col-md-6">
       <label for="personal_userid">User Id</label>
@@ -53,13 +67,28 @@
     <label for="personal_name">Name</label>
     <input type="text" class="form-control" name="personal_name" placeholder="Your Name">
   </div>
-    
-    
+
+
     <div class="form-group col-md-6">
       <label for="personal_email">Email</label>
       <input type="email" class="form-control" name="personal_email" placeholder="Email">
     </div>
 
+    <div class="form-group col-md-6">
+      <label for="personal_product">Product</label>
+      <input type="text" class="form-control" name="personal_product" placeholder="Product you need">
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="personal_product_quantity">Product Quantity</label>
+      <input type="number" class="form-control" name="personal_product_quantity" placeholder="Quantity of your product">
+    </div>
+
+
+    <div class="form-group col-md-6">
+      <label for="personal_amount">Amount</label>
+      <input type="number" class="form-control" name="personal_amount" placeholder="Amount you need">
+    </div>
 
 
 </div>
@@ -72,17 +101,18 @@
   </div>
   </div>
 
-  <div class="form-group">
+  <div class="form-group mb-4 ml-4 mr-4">
     <label for="personal_whyrequest">Tell us Briefly about Your Request</label>
     <textarea class="form-control" name="personal_whyrequest" rows="3"></textarea>
   </div>
 
 
-    
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+
+  <button type="submit" class="btn btn-primary mb-4 ml-4 mr-4">Submit</button>
 </form>
 
+</div>
 
 
 
@@ -92,13 +122,16 @@
 
 
 
+<p>
 
+  <button class="btn btn-primary btn-lg btn-block mt-5" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+  Request as an Organization
+  </button>
+</p>
+<div class="collapse" id="collapseExample2">
+  <div class="card card-body">
 
-
-
-<button type="button" class="btn btn-primary btn-lg btn-block mb-5">Request as an Organization</button>
-
-<form class="p-3" action="org_receiver_request.php" method="post">
+ <form class="p-3" action="org_receiver_request.php" method="post">
   <div class="form-row">
    <div class="form-group col-md-6">
       <label for="org_userId">User Id</label>
@@ -113,11 +146,28 @@
     <label for="org_name">Organization Name</label>
     <input type="text" class="form-control" name="org_name" placeholder="Your Organization Name">
   </div>
-    
-    
+
+
     <div class="form-group col-md-6">
       <label for="org_email">Email</label>
       <input type="email" class="form-control" name="org_email" placeholder="Email">
+    </div>
+
+
+    <div class="form-group col-md-6">
+      <label for="org_product">Product</label>
+      <input type="text" class="form-control" name="org_product" placeholder="Product you need">
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="org_product_quantity">Product Quantity</label>
+      <input type="number" class="form-control" name="org_product_quantity" placeholder="Quantity of your product">
+    </div>
+
+
+    <div class="form-group col-md-6">
+      <label for="org_amount">Amount</label>
+      <input type="number" class="form-control" name="org_amount" placeholder="Amount your organization need">
     </div>
 
 
@@ -136,21 +186,46 @@
   </div>
   </div>
 
-  <div class="form-group">
+  <div class="form-group mb-4 ml-4 mr-4">
     <label for="org_whyrequest">Tell us Briefly about Your Request</label>
-    <textarea class="form-control" name="org_whyrequest" rows="3"></textarea>
+    <textarea class="form-control " name="org_whyrequest" rows="3"></textarea>
   </div>
 
 
-    
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+
+  <button type="submit" class="btn btn-primary mb-4 ml-4 mr-4">Submit</button>
 </form>
+</div>
+            List of all donors:
+            <br>
+						<table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+							<tr>
+								<th>  <font size="2"> Receiver Name </font></th>
+								<th>  <font size="2"> Receiver ID </font></th>
+							</tr>
+							<?php
+
+								$con= mysqli_connect("localhost","root","", "charity");
+								$sql= 'SELECT * from users WHERE utype="donor"';
+								$result= $con->query($sql);
+
+								if ($result->num_rows>0){
+									while($row= $result-> fetch_assoc()){
+									 echo	 "<tr><td>".$row['user_name'] . "</td><td>" .$row['user_id'] . "</td>" ;
+									}
+								}
+								else {
+									echo "No results";
+								}
 
 
+								$con->close();
+							 ?>
+						</table>
 
 
-
+<a href="logout.php">Logout</a>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
