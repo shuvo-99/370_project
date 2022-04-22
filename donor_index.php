@@ -129,7 +129,7 @@ session_start();
       crossorigin="anonymous"
     />
 
-    <title>Hello, world!</title>
+    <title>Easy Charity</title>
     <style>
       .de {
         text-decoration: none;

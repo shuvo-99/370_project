@@ -112,7 +112,7 @@ session_start();
       crossorigin="anonymous"
     />
 
-    <title>Hello, world!</title>
+    <title>Redirected to payment (donor)</title>
     <style>
       td{
         text-align: center;
