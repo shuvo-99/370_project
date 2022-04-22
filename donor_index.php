@@ -44,19 +44,36 @@ session_start();
 
 			<h1>  <font size="1">Hello <?php echo $user_data['user_name'] ?>, This is your profile. You are  our verified donor.</font>
 </h1>
-
+				<a href="msg_query.php"> Send a message</a> <br><br>
+				<a href="inbox.php">View inbox</a> <br>
+				<a href="donation_history.php">View donation logs and history</a> <br>
 			 	<h1>  <font size="2"> Want to make donation? Find all places and people you can donate right here:
-
-			 </font>
 					<br>
+			 </font>
+
   <font size="-1">
 		<style type="text/css">
 	   h1 { text-align: center}
 	  </style>
-		<h1>
+
+			<a href="view_request.php">View donation requests for you! (New)</a> <br>
+			<form method="post">
+ <br>
 
 
+				<label for="utype">Choose your donation type:</label>
+				<select name="dtype" id="dtype">
+						<option value="money">Money (cash)</option>
+					<option value="product">Item/Product</option>
 
+				</select>
+
+				<input  id="button" type="submit"  value="Press to Proceed">
+				</select>
+				 <br>
+			 </form>
+
+<br>
 						<table style="border:1px solid black;margin-left:auto;margin-right:auto;">
 							<tr>
 								<th>  <font size="2"> Receiver Name </font></th>
@@ -81,28 +98,15 @@ session_start();
 								$con->close();
 							 ?>
 						</table>
-						<form method="post">
 
 
 
-			        <label for="utype">Choose your donation type:</label>
-			        <select name="dtype" id="dtype">
-			            <option value="money">Money (cash)</option>
-			          <option value="product">Item/Product</option>
-
-			        </select>
-
-			        <input  id="button" type="submit"  value="Press to Proceed">
-
-							 <br>
 
 
-
-		         </select>
 
 
 						</font>
-						</h1>
+
 					<br><br>
 			     <br><br>
 					 <br><br>
