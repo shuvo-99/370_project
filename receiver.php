@@ -25,15 +25,27 @@ session_start();
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      
-    </ul>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    
     <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item nav-text">
+          <a href="donor_index.php" class="btn" role="button">Home</a>
+        </li> -->
+
+        <li class="nav-item nav-text">
+          <a href="msg_query.php" class="btn text-white" role="button">Send Message</a>
+        </li>
+
+        <li class="nav-item nav-text">      
+          <a href="inbox.php" class="btn text-white" role="button">Inbox</a>
+        </li>
+        
+      </ul>
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
       
-      <a href="logout.php" class="btn btn-warning " role="button">Log Out</a>      
+      <a href="logout.php" class="btn btn-warning ms-2" role="button">Log Out</a>      
     </form>
   </div>
 </nav>
@@ -222,7 +234,7 @@ session_start();
 						</table>
 
 
-<a href="logout.php">Logout</a>
+<!-- <a href="logout.php">Logout</a> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
