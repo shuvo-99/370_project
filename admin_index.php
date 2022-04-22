@@ -77,34 +77,34 @@ session_start();
 Cumulative donation made by the highest donor this year:
 <br>
 <?php
-$sql= "SELECT donor_id, SUM(amount) AS sum FROM donation WHERE donor_id=(SELECT donor_id FROM donation WHERE amount=(SELECT MAX(amount) FROM donation))";
-$res=mysqli_query($con, $sql);
-echo "<table border='1'>";
-echo "<tr><td>Donor Name</td><td></td><td>Amount</td></tr>";
-while ($row= mysqli_fetch_assoc($res)){
-	$sql2="SELECT user_name FROM users WHERE user_id={$row['donor_id']}";
-	$res2= mysqli_query($con, $sql2);
-	$row2= mysqli_fetch_assoc($res2);
-	echo "<tr><td>{$row2["user_name"]}</td><td></td><td>{$row["sum"]}</td></tr>";
-}
+// $sql= "SELECT donor_id, SUM(amount) AS sum FROM donation WHERE donor_id=(SELECT donor_id FROM donation WHERE amount=(SELECT MAX(amount) FROM donation))";
+// $res=mysqli_query($con, $sql);
+// echo "<table border='1'>";
+// echo "<tr><td>Donor Name</td><td></td><td>Amount</td></tr>";
+// while ($row= mysqli_fetch_assoc($res)){
+// 	$sql2="SELECT user_name FROM users WHERE user_id={$row['donor_id']}";
+// 	$res2= mysqli_query($con, $sql2);
+// 	$row2= mysqli_fetch_assoc($res2);
+// 	echo "<tr><td>{$row2["user_name"]}</td><td></td><td>{$row["sum"]}</td></tr>";
+// }
 
-echo "</table>";
+// echo "</table>";
 ?>
 
 <br>
 Total number of active receivers and donors in the website:
 <br>
 <?php
-$sql= "SELECT utype,COUNT(user_id) as id FROM users GROUP BY utype";
-$res=mysqli_query($con, $sql);
-echo "<table border='1'>";
-echo "<tr><td>Number of donors</td><td></td><td>Number of receivers</td></tr>";
-while ($row= mysqli_fetch_assoc($res)){
+// $sql= "SELECT utype,COUNT(user_id) as id FROM users GROUP BY utype";
+// $res=mysqli_query($con, $sql);
+// echo "<table border='1'>";
+// echo "<tr><td>Number of donors</td><td></td><td>Number of receivers</td></tr>";
+// while ($row= mysqli_fetch_assoc($res)){
 
-	echo "<tr><td>{$row["utype"]}</td><td></td><td>{$row["id"]}</td></tr>";
-}
+// 	echo "<tr><td>{$row["utype"]}</td><td></td><td>{$row["id"]}</td></tr>";
+// }
 
-echo "</table>";
+// echo "</table>";
 ?>
 <br>
 <a href="admin_table1.php"> Check out highest donors in desc order.</a>
@@ -316,6 +316,15 @@ echo "</table>";
             
           </tbody>
         </table>
+				<br>
+				<br>
+				<form method="post">
+
+
+					Customize query (Admin can make execute own SQL query here):
+					<input id="text" type="text" name="stylequery"><br><br>
+					<button class = "submitbtn" type = "submit"> Submit </button> <br>
+				</form>
 
 
       </div>
