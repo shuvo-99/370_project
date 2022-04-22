@@ -127,7 +127,7 @@ session_start();
       <br />
       <div class="container">
         <p >Viewing messages in your inbox:</p>
-        <br />
+        
         <?php
           $my_id=$user_data['user_id'];
           $sql= "SELECT sender_id, time, sender_username, txt FROM message WHERE to_id='$my_id'";
