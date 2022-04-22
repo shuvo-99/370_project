@@ -29,17 +29,17 @@ session_start();
    Viewing messages in your inbox:
    <br>
    <?php
-   $my_id=$user_data['user_id'];
-   $sql= "SELECT sender_id, time, sender_username, txt FROM message WHERE to_id='$my_id'";
-   $res=mysqli_query($con, $sql);
-   echo "<table border='1'>";
-   echo "<tr><td>Sender_id</td><td>Time</td><td>Sender_username</td><td>txt</td></tr>";
-   while ($row= mysqli_fetch_assoc($res)){
+  //  $my_id=$user_data['user_id'];
+  //  $sql= "SELECT sender_id, time, sender_username, txt FROM message WHERE to_id='$my_id'";
+  //  $res=mysqli_query($con, $sql);
+  //  echo "<table border='1'>";
+  //  echo "<tr><td>Sender_id</td><td>Time</td><td>Sender_username</td><td>txt</td></tr>";
+  //  while ($row= mysqli_fetch_assoc($res)){
 
-   	echo "<tr><td>{$row["sender_id"]}</td><td>{$row["time"]}</td><td>{$row["sender_username"]}</td><td>{$row["txt"]}</td></tr>";
-   }
+  //  	echo "<tr><td>{$row["sender_id"]}</td><td>{$row["time"]}</td><td>{$row["sender_username"]}</td><td>{$row["txt"]}</td></tr>";
+  //  }
 
-   echo "</table>";
+  //  echo "</table>";
    ?>
    <br>
 
@@ -94,6 +94,10 @@ session_start();
             style="--bs-scroll-height: 100px"
           >
             <li class="nav-item nav-text">
+              <a href="donor_index.php" class="btn" role="button">Home</a>
+            </li>
+
+            <li class="nav-item nav-text">
               <a href="msg_query.php" class="btn" role="button">Send Message</a>
             </li>
             
@@ -128,8 +132,8 @@ session_start();
           $my_id=$user_data['user_id'];
           $sql= "SELECT sender_id, time, sender_username, txt FROM message WHERE to_id='$my_id'";
           $res=mysqli_query($con, $sql);
-          echo "<table border='1'>";
-          echo "<tr><td>Sender_id</td><td>Time</td><td>Sender_username</td><td>txt</td></tr>";
+          // echo "<table border='1'>";
+          // echo "<tr><td>Sender_id</td><td>Time</td><td>Sender_username</td><td>txt</td></tr>";
           while ($row= mysqli_fetch_assoc($res)){
 
             echo "<tr><td>{$row["sender_id"]}</td><td>{$row["time"]}</td><td>{$row["sender_username"]}</td><td>{$row["txt"]}</td></tr>";

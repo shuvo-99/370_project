@@ -120,6 +120,7 @@ session_start();
     </style>
   </head>
   <body>
+    
     <h1 class="text-center">Check out the donation List to donate</h1> <br>
     <div class="container">
       <table class="table table-striped" >
