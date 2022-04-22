@@ -120,12 +120,66 @@ session_start();
     </style>
   </head>
   <body>
-    
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarScroll"
+        >
+          <ul
+            class="navbar-nav me-2 my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item nav-text">
+              <a href="donor_index.php" class="btn" role="button">Home</a>
+            </li>
+
+            <li class="nav-item nav-text">
+              <a href="msg_query.php" class="btn" role="button">Send Message</a>
+            </li>
+
+						<li class="nav-item nav-text">
+              <a href="inbox.php" class="btn" role="button">Inbox</a>
+            </li>
+            
+            <li class="nav-item nav-text">
+              <a href="donation_history.php" class="btn" role="button"
+                >Donation history</a
+              >
+            </li>
+            <li class="nav-item nav-text">
+              <a href="view_request.php" class="btn" role="button"
+                >Donation Request</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="logout.php" class="btn btn-warning" role="button"
+                >Log Out</a
+              >
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+    <br>
     <h1 class="text-center">Check out the donation List to donate</h1> <br>
     <div class="container">
-      <table class="table table-striped" >
+      <table class="table table-striped table-info" >
         <thead>
-          <tr>
+          <tr >
             
             <th scope="col " class="text-center">Receiver Name</th>
             <th scope="col " class="text-center">Receiver ID </th>

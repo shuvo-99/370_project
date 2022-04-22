@@ -38,17 +38,17 @@ session_start();
 				Your donation activity log: (From oldest to newest)
 				<br>
 				<?php
-        $ID= $user_data['user_id'];
-				$sql= "SELECT receiver_name,amount, acc_num FROM donation WHERE donor_id='$ID'";
-				$res=mysqli_query($con, $sql);
-				echo "<table border='1'>";
-				echo "<tr><td>Donated To</td><td>Amount Donated </td><td>Acc_num Donated to</td></tr>";
-				while ($row= mysqli_fetch_assoc($res)){
+        // $ID= $user_data['user_id'];
+				// $sql= "SELECT receiver_name,amount, acc_num FROM donation WHERE donor_id='$ID'";
+				// $res=mysqli_query($con, $sql);
+				// echo "<table border='1'>";
+				// echo "<tr><td>Donated To</td><td>Amount Donated </td><td>Acc_num Donated to</td></tr>";
+				// while ($row= mysqli_fetch_assoc($res)){
 
-					echo "<tr><td>{$row["receiver_name"]}</td><td>{$row["amount"]}</td><td>{$row["acc_num"]}</td></tr>";
-				}
+				// 	echo "<tr><td>{$row["receiver_name"]}</td><td>{$row["amount"]}</td><td>{$row["acc_num"]}</td></tr>";
+				// }
 
-				echo "</table>";
+				// echo "</table>";
 ?>
 
 <br><br>
