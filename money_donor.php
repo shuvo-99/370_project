@@ -61,24 +61,6 @@ session_start();
               <th>  <font size="2"> Receiver Name </font></th>
               <th>  <font size="2"> Receiver ID </font></th>
             </tr>
-            <?php
-
-              $con= mysqli_connect("localhost","root","", "charity");
-              $sql= 'SELECT * from users WHERE utype="receiver"';
-              $result= $con->query($sql);
-
-              if ($result->num_rows>0){
-                while($row= $result-> fetch_assoc()){
-                 echo	 "<tr><td>".$row['user_name'] . "</td><td>" .$row['user_id'] . "</td>" ;
-                }
-              }
-              else {
-                echo "No results";
-              }
-
-
-              $con->close();
-             ?>
 
     <form method="post" >
       <div class = "container">
