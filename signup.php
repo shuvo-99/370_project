@@ -116,7 +116,7 @@ session_start();
         
       <div>
         <br>
-        <h1>Signup to EasyCharity</h1>
+        <h1>Signup to EasyCharity</h1> <br>
           <form method='post'>
             
             <div class="mb-3">
