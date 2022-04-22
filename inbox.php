@@ -93,15 +93,15 @@ session_start();
             class="navbar-nav me-2 my-2 my-lg-0 navbar-nav-scroll"
             style="--bs-scroll-height: 100px"
           >
-            <li class="nav-item nav-text">
+            <!-- <li class="nav-item nav-text">
               <a href="donor_index.php" class="btn" role="button">Home</a>
-            </li>
+            </li> -->
 
             <li class="nav-item nav-text">
               <a href="msg_query.php" class="btn" role="button">Send Message</a>
             </li>
             
-            <li class="nav-item nav-text">
+            <!-- <li class="nav-item nav-text">
               <a href="donation_history.php" class="btn" role="button"
                 >Donation history</a
               >
@@ -110,7 +110,7 @@ session_start();
               <a href="view_request.php" class="btn" role="button"
                 >Donation Request</a
               >
-            </li>
+            </li> -->
             <li class="nav-item">
               <a href="logout.php" class="btn btn-warning" role="button"
                 >Log Out</a
@@ -146,7 +146,7 @@ session_start();
         <br>
         
 
-        <table class="table table-striped" >
+        <table class="table table-striped table-info" >
           <thead>
             <tr>
               

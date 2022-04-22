@@ -95,6 +95,17 @@ session_start();
           >
             <li class="nav-item nav-text">
               <a href="admin_index.php" class="btn" role="button">Home</a>
+
+              <li class="nav-item nav-text">
+              <a href="msg_query.php" class="btn" role="button">Send Message</a>
+            </li>
+            <li class="nav-item nav-text">
+              <a href="inbox.php" class="btn" role="button">Inbox</a>
+            </li>
+            
+            <li class="nav-item nav-text">
+              <a href="admin_table2.php" class="btn" role="button">Receivers</a>
+            </li>
             
             <li class="nav-item">
               <a href="logout.php" class="btn btn-warning" role="button"
