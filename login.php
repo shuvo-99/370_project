@@ -237,7 +237,7 @@ session_start();
           <br />
           <p>
             
-            Shakti Foundation is a non-government organization committed to the
+            EasyCharity is a non-government organization committed to the
             economic and social empowerment of disadvantaged women across
             Bangladesh. It believes in realizing the potential of women to become
             strong, independent members of their communities. Shakti began its
