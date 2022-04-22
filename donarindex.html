@@ -42,6 +42,12 @@
       .nav-text :hover {
         color: rgb(250, 0, 50);
       }
+
+      /* .submit-btn {
+        height: 50px;
+        width: 20%;
+        padding-top: 0px;
+      } */
     </style>
   </head>
   <body>
@@ -153,7 +159,27 @@
           Hello dex@gmail.com, This is your profile. You are our verified donor.
         </p>
       </div>
-      <div></div>
+      <br />
+
+      <div>
+        <h3>Want to make donation?</h3>
+
+        <form method="post">
+          <label for="utype">Choose your donation type:</label>
+          <select name="dtype" id="dtype">
+            <option value="money">Money (cash)</option>
+            <option value="product">Item/Product</option>
+          </select>
+          <br />
+          <input
+            id="button "
+            class="btn btn-warning"
+            type="submit"
+            value="Press to Proceed"
+          />
+          <br />
+        </form>
+      </div>
     </section>
 
     <script
