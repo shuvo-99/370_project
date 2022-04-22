@@ -297,6 +297,11 @@ session_start();
               <br>
               Don't have an account?
               <a href="signup.php" class="de text-white">Click to Sign Up</a>
+              <br>
+              <br>
+              Forgot your password?
+              <a href="forget_password.php" class="de text-white">Click here to reset</a>
+
             </form>
           </div>
       </div>

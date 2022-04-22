@@ -21,11 +21,9 @@ session_start();
   </style>
  <body>
   <h1> <font size="+2"> Inbox </font></H1>
-
  	 <style type="text/css">
  	  h1 { text-align: center}
  	 </style>
-
    Viewing messages in your inbox:
    <br>
    <?php
@@ -35,14 +33,11 @@ session_start();
   //  echo "<table border='1'>";
   //  echo "<tr><td>Sender_id</td><td>Time</td><td>Sender_username</td><td>txt</td></tr>";
   //  while ($row= mysqli_fetch_assoc($res)){
-
   //  	echo "<tr><td>{$row["sender_id"]}</td><td>{$row["time"]}</td><td>{$row["sender_username"]}</td><td>{$row["txt"]}</td></tr>";
   //  }
-
   //  echo "</table>";
    ?>
    <br>
-
    <a href="logout.php">Logout</a><br>
  <a href="signup.php">Signup as donor/receiver</a><br>
  </body>
